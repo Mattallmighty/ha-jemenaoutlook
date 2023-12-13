@@ -51,75 +51,74 @@ MIN_TIME_BETWEEN_UPDATES = timedelta(hours=24)
 SCAN_INTERVAL = timedelta(hours=24)
 
 SENSOR_TYPES = {
-    'yesterday_user_type': ['Yesterday user type', 'type', 'mdi:home-account'],
-    'yesterday_usage': ['Yesterday usage', KILOWATT_HOUR, 'mdi:flash'],
-    'yesterday_consumption': ['Yesterday consumption', KILOWATT_HOUR, 'mdi:flash'],
-    'yesterday_consumption_peak': ['Yesterday consumption peak', KILOWATT_HOUR, 'mdi:flash'],
-    'yesterday_consumption_offpeak': ['Yesterday consumption offpeak', KILOWATT_HOUR, 'mdi:flash'],
-    'yesterday_consumption_shoulder': ['Yesterday consumption shoulder', KILOWATT_HOUR, 'mdi:flash'],
-    'yesterday_consumption_controlled_load': ['Yesterday consumption controlled load', KILOWATT_HOUR, 'mdi:flash'],
-    'yesterday_generation': ['Yesterday generation', KILOWATT_HOUR, 'mdi:flash'],
-    'yesterday_cost_total': ['Yesterday cost total', PRICE, 'mdi:currency-usd'],
-    'yesterday_cost_consumption': ['Yesterday cost consumption', PRICE, 'mdi:currency-usd'],
-    'yesterday_cost_generation': ['Yesterday cost generation', PRICE, 'mdi:currency-usd'],
-    'yesterday_cost_difference': ['Yesterday cost difference', PRICE, 'mdi:currency-usd'],
-    'yesterday_percentage_difference': ['Yesterday percentage difference', KILOWATT_HOUR, 'mdi:percent'],
-    'yesterday_difference_message': ['Yesterday difference message', 'text', 'mdi:clipboard-text'],
-    'yesterday_consumption_difference': ['Yesterday consumption difference', KILOWATT_HOUR, 'mdi:flash'],
-    'yesterday_consumption_change': ['Yesterday consumption change', KILOWATT_HOUR, 'mdi:swap-vertical'],
-    'yesterday_suburb_average': ['Yesterday suburb average', KILOWATT_HOUR, 'mdi:flash'],
-    'previous_day_usage': ['Previous day usage', KILOWATT_HOUR, 'mdi:flash'],
-    'previous_day_consumption': ['Previous day consumption', KILOWATT_HOUR, 'mdi:flash'],
-    'previous_day_generation': ['Previous day generation', KILOWATT_HOUR, 'mdi:flash'],
-    'supply_charge': ['Supply charge', PRICE, 'mdi:currency-usd'],
-    'weekday_peak_cost': ['Weekday peak cost', PRICE, 'mdi:currency-usd'],
-    'weekday_offpeak_cost': ['Weekday offpeak cost', PRICE, 'mdi:currency-usd'],
-    'weekday_shoulder_cost': ['Weekday shoulder cost', PRICE, 'mdi:currency-usd'],
-    'controlled_load_cost': ['Controlled load cost', PRICE, 'mdi:currency-usd'],
-    'weekend_offpeak_cost': ['Weekend offpeak cost', PRICE, 'mdi:currency-usd'],
-    'single_rate_cost': ['Single rate cost', PRICE, 'mdi:currency-usd'],
-    'generation_cost': ['Generation cost', PRICE, 'mdi:currency-usd'],
-    'this_week_user_type': ['This week user type', 'type', 'mdi:home-account'],
-    'this_week_usage': ['This week usage', KILOWATT_HOUR, 'mdi:flash'],
-    'this_week_consumption': ['This week consumption', KILOWATT_HOUR, 'mdi:flash'],
-    'this_week_consumption_peak': ['This week consumption peak', KILOWATT_HOUR, 'mdi:flash'],
-    'this_week_consumption_offpeak': ['This week consumption offpeak', KILOWATT_HOUR, 'mdi:flash'],
-    'this_week_consumption_shoulder': ['This week consumption shoulder', KILOWATT_HOUR, 'mdi:flash'],
-    'this_week_consumption_controlled_load': ['This week consumption controlled load', KILOWATT_HOUR, 'mdi:flash'],
-    'this_week_generation': ['This week generation', KILOWATT_HOUR, 'mdi:flash'],
-    'this_week_cost_total': ['This week cost total', PRICE, 'mdi:currency-usd'],
-    'this_week_cost_consumption': ['This week cost consumption', PRICE, 'mdi:currency-usd'],
-    'this_week_cost_generation': ['This week cost generation', PRICE, 'mdi:currency-usd'],
-    'this_week_cost_difference': ['This week cost difference', PRICE, 'mdi:currency-usd'],
-    'this_week_percentage_difference': ['This week percentage difference', KILOWATT_HOUR, 'mdi:percent'],
-    'this_week_difference_message': ['This week difference message', 'text', 'mdi:clipboard-text'],
-    'this_week_consumption_difference': ['This week consumption difference', KILOWATT_HOUR, 'mdi:flash'],
-    'this_week_consumption_change': ['This week consumption change', KILOWATT_HOUR, 'mdi:swap-vertical'],
-    'this_week_suburb_average': ['This week suburb average', KILOWATT_HOUR, 'mdi:flash'],
-    'last_week_usage': ['Last week usage', KILOWATT_HOUR, 'mdi:flash'],
-    'last_week_consumption': ['Last week consumption', KILOWATT_HOUR, 'mdi:flash'],
-    'last_week_generation': ['Last week generation', KILOWATT_HOUR, 'mdi:flash'],
-    'this_month_user_type': ['This month user type', 'type', 'mdi:home-account'],
-    'this_month_usage': ['This month usage', KILOWATT_HOUR, 'mdi:flash'],
-    'this_month_consumption': ['This month consumption', KILOWATT_HOUR, 'mdi:flash'],
-    'this_month_consumption_peak': ['This month consumption peak', KILOWATT_HOUR, 'mdi:flash'],
-    'this_month_consumption_offpeak': ['This month consumption offpeak', KILOWATT_HOUR, 'mdi:flash'],
-    'this_month_consumption_shoulder': ['This month consumption shoulder', KILOWATT_HOUR, 'mdi:flash'],
-    'this_month_consumption_controlled_load': ['This month consumption controlled load', KILOWATT_HOUR, 'mdi:flash'],
-    'this_month_generation': ['This month generation', KILOWATT_HOUR, 'mdi:flash'],
-    'this_month_cost_total': ['This month cost total', PRICE, 'mdi:currency-usd'],
-    'this_month_cost_consumption': ['This month cost consumption', PRICE, 'mdi:currency-usd'],
-    'this_month_cost_generation': ['This month cost generation', PRICE, 'mdi:currency-usd'],
-    'this_month_cost_difference': ['This month cost difference', PRICE, 'mdi:currency-usd'],
-    'this_month_percentage_difference': ['This month percentage difference', KILOWATT_HOUR, 'mdi:percent'],
-    'this_month_difference_message': ['This month difference message', 'text', 'mdi:clipboard-text'],
-    'this_month_consumption_difference': ['This month consumption difference', KILOWATT_HOUR, 'mdi:flash'],
-    'this_month_consumption_change': ['This month consumption change', KILOWATT_HOUR, 'mdi:swap-vertical'],
-    'this_month_suburb_average': ['This month suburb average', KILOWATT_HOUR, 'mdi:flash'],
-
-    'last_month_usage': ['Last month usage', KILOWATT_HOUR, 'mdi:flash'],
-    'last_month_consumption': ['Last month consumption', KILOWATT_HOUR, 'mdi:flash'],
-    'last_month_generation': ['Last month generation', KILOWATT_HOUR, 'mdi:flash'],
+    'yesterday_user_type': ['Yesterday user type', 'type', 'mdi:home-account', 'total'],
+    'yesterday_usage': ['Yesterday usage', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'yesterday_consumption': ['Yesterday consumption', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'yesterday_consumption_peak': ['Yesterday consumption peak', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'yesterday_consumption_offpeak': ['Yesterday consumption offpeak', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'yesterday_consumption_shoulder': ['Yesterday consumption shoulder', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'yesterday_consumption_controlled_load': ['Yesterday consumption controlled load', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'yesterday_generation': ['Yesterday generation', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'yesterday_cost_total': ['Yesterday cost total', PRICE, 'mdi:currency-usd', 'total'],
+    'yesterday_cost_consumption': ['Yesterday cost consumption', PRICE, 'mdi:currency-usd', 'total'],
+    'yesterday_cost_generation': ['Yesterday cost generation', PRICE, 'mdi:currency-usd', 'total'],
+    'yesterday_cost_difference': ['Yesterday cost difference', PRICE, 'mdi:currency-usd', 'total'],
+    'yesterday_percentage_difference': ['Yesterday percentage difference', KILOWATT_HOUR, 'mdi:percent', 'total'],
+    'yesterday_difference_message': ['Yesterday difference message', 'text', 'mdi:clipboard-text', 'total'],
+    'yesterday_consumption_difference': ['Yesterday consumption difference', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'yesterday_consumption_change': ['Yesterday consumption change', KILOWATT_HOUR, 'mdi:swap-vertical', 'total'],
+    'yesterday_suburb_average': ['Yesterday suburb average', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'previous_day_usage': ['Previous day usage', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'previous_day_consumption': ['Previous day consumption', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'previous_day_generation': ['Previous day generation', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'supply_charge': ['Supply charge', PRICE, 'mdi:currency-usd', 'total'],
+    'weekday_peak_cost': ['Weekday peak cost', PRICE, 'mdi:currency-usd', 'total'],
+    'weekday_offpeak_cost': ['Weekday offpeak cost', PRICE, 'mdi:currency-usd', 'total'],
+    'weekday_shoulder_cost': ['Weekday shoulder cost', PRICE, 'mdi:currency-usd', 'total'],
+    'controlled_load_cost': ['Controlled load cost', PRICE, 'mdi:currency-usd', 'total'],
+    'weekend_offpeak_cost': ['Weekend offpeak cost', PRICE, 'mdi:currency-usd', 'total'],
+    'single_rate_cost': ['Single rate cost', PRICE, 'mdi:currency-usd', 'total'],
+    'generation_cost': ['Generation cost', PRICE, 'mdi:currency-usd', 'total'],
+    'this_week_user_type': ['This week user type', 'type', 'mdi:home-account', 'total'],
+    'this_week_usage': ['This week usage', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_week_consumption': ['This week consumption', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_week_consumption_peak': ['This week consumption peak', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_week_consumption_offpeak': ['This week consumption offpeak', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_week_consumption_shoulder': ['This week consumption shoulder', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_week_consumption_controlled_load': ['This week consumption controlled load', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_week_generation': ['This week generation', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_week_cost_total': ['This week cost total', PRICE, 'mdi:currency-usd', 'total_increasing'],
+    'this_week_cost_consumption': ['This week cost consumption', PRICE, 'mdi:currency-usd', 'total_increasing'],
+    'this_week_cost_generation': ['This week cost generation', PRICE, 'mdi:currency-usd', 'total_increasing'],
+    'this_week_cost_difference': ['This week cost difference', PRICE, 'mdi:currency-usd', 'total_increasing'],
+    'this_week_percentage_difference': ['This week percentage difference', KILOWATT_HOUR, 'mdi:percent', 'total_increasing'],
+    'this_week_difference_message': ['This week difference message', 'text', 'mdi:clipboard-text',''],
+    'this_week_consumption_difference': ['This week consumption difference', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_week_consumption_change': ['This week consumption change', KILOWATT_HOUR, 'mdi:swap-vertical', 'total_increasing'],
+    'this_week_suburb_average': ['This week suburb average', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'last_week_usage': ['Last week usage', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'last_week_consumption': ['Last week consumption', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'last_week_generation': ['Last week generation', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'this_month_user_type': ['This month user type', 'type', 'mdi:home-account', 'total_increasing'],
+    'this_month_usage': ['This month usage', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_month_consumption': ['This month consumption', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_month_consumption_peak': ['This month consumption peak', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_month_consumption_offpeak': ['This month consumption offpeak', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_month_consumption_shoulder': ['This month consumption shoulder', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_month_consumption_controlled_load': ['This month consumption controlled load', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_month_generation': ['This month generation', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_month_cost_total': ['This month cost total', PRICE, 'mdi:currency-usd', 'total_increasing'],
+    'this_month_cost_consumption': ['This month cost consumption', PRICE, 'mdi:currency-usd', 'total_increasing'],
+    'this_month_cost_generation': ['This month cost generation', PRICE, 'mdi:currency-usd', 'total_increasing'],
+    'this_month_cost_difference': ['This month cost difference', PRICE, 'mdi:currency-usd', 'total_increasing'],
+    'this_month_percentage_difference': ['This month percentage difference', KILOWATT_HOUR, 'mdi:percent', 'total_increasing'],
+    'this_month_difference_message': ['This month difference message', 'text', 'mdi:clipboard-text', ''],
+    'this_month_consumption_difference': ['This month consumption difference', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'this_month_consumption_change': ['This month consumption change', KILOWATT_HOUR, 'mdi:swap-vertical', 'total_increasing'],
+    'this_month_suburb_average': ['This month suburb average', KILOWATT_HOUR, 'mdi:flash', 'total_increasing'],
+    'last_month_usage': ['Last month usage', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'last_month_consumption': ['Last month consumption', KILOWATT_HOUR, 'mdi:flash', 'total'],
+    'last_month_generation': ['Last month generation', KILOWATT_HOUR, 'mdi:flash', 'total'],
 }
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
@@ -169,7 +168,9 @@ class JemenaOutlookSensor(Entity):
         self.type = sensor_type
         self._name = SENSOR_TYPES[sensor_type][0]
         self._unit_of_measurement = SENSOR_TYPES[sensor_type][1]
+        self._device_class = 'energy'
         self._icon = SENSOR_TYPES[sensor_type][2]
+        self._state_class = 'total_increasing'
         self.jemenaoutlook_data = jemenaoutlook_data
         self._state = None
 
@@ -196,6 +197,16 @@ class JemenaOutlookSensor(Entity):
     def unit_of_measurement(self):
         """Return the unit of measurement of this entity, if any."""
         return self._unit_of_measurement
+    
+    @property
+    def device_class(self):
+        """Return the device_class as be energy for electricity grid. """
+        return self._device_class
+    
+    @property
+    def state_class(self):
+        """Return the state class.state_class, must be total or total_increasing."""
+        return self._state_class
 
     @property
     def icon(self):
